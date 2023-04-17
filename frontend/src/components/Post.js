@@ -203,4 +203,37 @@ function Post({ post }) {
   );
 }
 
-export default Post;
+
+
+function Post2() {
+    return (
+        <div className='post'>
+            <div className='post__info'>
+                <Avatar/>
+                <h4>post 2</h4>
+                <small>Timestamp 2</small>
+            </div>
+            <div className='post__body'>
+                <p>this is the second post</p>
+                <button className='post__btnAnswer' style={{width:'50px', float: 'left' }}>Answer</button>
+            </div>
+            <div className='post__footer'>
+            <div className='post__footerActions'>
+                <ArrowUpwardOutlined/>
+                <ArrowDownwardOutlined />
+            </div>
+            <RepeatOneOutlined/> 
+            <ChatBubbleOutlined />
+            <div className='post__footerleft'>
+                 <ShareOutlined />
+                 <MoreHorizOutlined />
+            </div>
+            </div>
+            <p>0 Answers</p>
+        </div>
+    )
+}
+
+export { Post , Post2 };
+
+
