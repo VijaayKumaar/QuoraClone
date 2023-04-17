@@ -24,7 +24,7 @@ function Feed() {
       {posts.map((post, index) => (
             
         <Post key={index} post={post} />
-         <Post2/>
+      
     ))}
       {/* <Post />
       <Post />
@@ -34,6 +34,10 @@ function Feed() {
      <Post /> */}
          
     </div>
+    <div>
+         <Post2/>
+      <div/>
+
   );
 }
 
