@@ -22,9 +22,10 @@ function Feed() {
       <QuoraBox />
      
       {posts.map((post, index) => (
-             <Post2/>
+            
         <Post key={index} post={post} />
-      ))}
+         <Post2/>
+    ))}
       {/* <Post />
       <Post />
       <Post />
