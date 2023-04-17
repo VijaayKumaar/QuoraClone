@@ -20,6 +20,7 @@ function Feed() {
   return (
     <div className="feed">
       <QuoraBox />
+         <Post2/>
       {posts.map((post, index) => (
         <Post key={index} post={post} />
       ))}
@@ -29,7 +30,7 @@ function Feed() {
       <Post />
 
      <Post /> */}
-         <Post2/>
+         
     </div>
   );
 }
