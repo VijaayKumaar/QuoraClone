@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import QuoraBox from "./QuoraBox";
 import "./css/Feed.css";
-import Post from "./Post";
+import {Post, Post2} from "./Post";
 import axios from "axios";
 
 function Feed() {
@@ -27,7 +27,9 @@ function Feed() {
       <Post />
       <Post />
       <Post />
-      <Post /> */}
+
+     <Post /> */}
+         <Post2/>
     </div>
   );
 }
