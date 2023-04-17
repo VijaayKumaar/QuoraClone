@@ -36,7 +36,7 @@ function Feed() {
     </div>
     <div>
          <Post2/>
-      <div/>
+      </div>
 
   );
 }
