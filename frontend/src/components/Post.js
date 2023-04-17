@@ -1,6 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import {
   ArrowDownwardOutlined,
+  ArrowLeft,
   ArrowUpwardOutlined,
   ChatBubbleOutlined,
   MoreHorizOutlined,
@@ -65,6 +66,9 @@ function Post({ post }) {
     }
   };
   return (
+
+
+
     <div className="post">
       <div className="post__info">
         <Avatar src={post?.user?.photo} />
@@ -127,6 +131,9 @@ function Post({ post }) {
         </div>
         {post.questionUrl !== "" && <img src={post.questionUrl} alt="url" />}
       </div>
+
+
+
       <div className="post__footer">
         <div className="post__footerAction">
           <ArrowUpwardOutlined />
@@ -195,45 +202,75 @@ function Post({ post }) {
                 </div>
               </div>
               <div className="post-answer">{ReactHtmlParser(_a?.answer)}</div>
+              
             </div>
+
           </>
+
+
         ))}
+
+      </div>
+
+    </div>
+
+  );
+
+
+}
+
+
+function Newpost() {
+  return (
+    <div className='post'>
+      <div className='post__info'>
+        <Avatar />
+        <h4>this</h4>
+        <small>3 days ago</small>
+      </div>
+      <div className='post__body'
+
+      >
+        <img src="https://cdn.mycplus.com/mycplus/wp-content/uploads/2009/02/programming-languages.jpg" />
+        <div class="post__question">
+
+          <p>Backend  Server Not working here.. Its only Demo Frontend.</p>
+          <button class="post__btnAnswer">
+            Answer
+          </button>
+        </div>
+        <div className='post__footer'>
+          <div className='post__footerAction'>
+            <ArrowUpwardOutlined />
+            <ArrowDownwardOutlined />
+          </div>
+          <RepeatOneOutlined />
+          <ChatBubbleOutlined />
+          <div className='post__footerLeft'>
+            <ShareOutlined />
+            <MoreHorizOutlined />
+          </div>
+        </div>
+        <p
+          style={{
+            color: "rgba(0,0,0,0.5)",
+            fontSize: "12px",
+            fontWeight: "bold",
+            margin: "10px 0",
+          }}
+        >
+          0 Answers</p>
+        <div className="post__answer">
+          <div className="post-answer-container">
+
+          </div>
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
+export { Post, Newpost };
 
-
-function Post2() {
-    return (
-        <div className='post'>
-            <div className='post__info'>
-                <Avatar/>
-                <h4>post 2</h4>
-                <small>Timestamp 2</small>
-            </div>
-            <div className='post__body'>
-                <p>this is the second post</p>
-                <button className='post__btnAnswer' style={{width:'50px', float: 'left' }}>Answer</button>
-            </div>
-            <div className='post__footer'>
-            <div className='post__footerActions'>
-                <ArrowUpwardOutlined/>
-                <ArrowDownwardOutlined />
-            </div>
-            <RepeatOneOutlined/> 
-            <ChatBubbleOutlined />
-            <div className='post__footerleft'>
-                 <ShareOutlined />
-                 <MoreHorizOutlined />
-            </div>
-            </div>
-            <p>0 Answers</p>
-        </div>
-    )
-}
-
-export { Post , Post2 };
 
 
